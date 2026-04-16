@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guy Rich Concepts — Creating Your Brand With Essence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --blue:#2D6BFF;--blue-deep:#1A4FD6;--blue-bright:#5B8FFF;
+    --dark-900:#080C14;--dark-800:#0D1220;--dark-700:#111827;
+    --dark-600:#1C2537;--border-subtle:rgba(255,255,255,0.06);
+    --text-primary:#F0F4FF;--text-secondary:#8A9BB8;--text-muted:#4A5A78;
+    --font:"Montserrat",sans-serif;
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--text-primary);background:var(--dark-900);line-height:1.6;overflow-x:hidden}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 3rem;border-bottom:0.5px solid var(--border-subtle);position:sticky;top:0;background:rgba(8,12,20,0.93);backdrop-filter:blur(20px);z-index:100}
+  .nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .nav-logo-img{width:44px;height:44px;border-radius:10px;object-fit:contain;background:#000;flex-shrink:0}
+  .nav-brand-text strong{display:block;font-size:14px;font-weight:700;color:var(--text-primary);letter-spacing:0.04em}
+  .nav-brand-text span{display:block;font-size:8px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--blue);margin-top:2px}
+  .nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+  .nav-links a{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;color:var(--text-secondary);transition:color .2s;font-weight:500}
+  .nav-links a:hover{color:var(--blue-bright)}
+  .nav-cta{padding:.55rem 1.4rem!important;background:var(--blue)!important;color:white!important;border-radius:4px;font-weight:600!important}
+  .nav-cta:hover{background:var(--blue-deep)!important}
+  .hero{display:grid;grid-template-columns:1fr 1fr;min-height:92vh;border-bottom:0.5px solid var(--border-subtle)}
+  .hero-left{padding:6rem 3.5rem 5rem;display:flex;flex-direction:column;justify-content:center;border-right:0.5px solid var(--border-subtle)}
+  .hero-eyebrow{display:flex;align-items:center;gap:12px;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--blue);margin-bottom:2rem;font-weight:600}
+  .hero-eyebrow::before{content:"";display:block;width:28px;height:1.5px;background:var(--blue)}
+  .hero-title{font-size:clamp(36px,4.5vw,62px);font-weight:700;line-height:1.1;color:var(--text-primary);margin-bottom:0.4rem}
+  .hero-title em{font-style:italic;color:var(--blue-bright);display:block;font-weight:300}
+  .hero-desc{font-size:13px;line-height:1.9;color:var(--text-secondary);max-width:400px;margin-bottom:2.5rem}
+  .hero-actions{display:flex;gap:1rem;align-items:center}
+  .btn-primary{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:.85rem 2rem;background:var(--blue);color:white;border:none;border-radius:4px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s,transform .15s}
+  .btn-primary:hover{background:var(--blue-deep);transform:translateY(-1px)}
+  .btn-ghost{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:.85rem 2rem;background:transparent;color:var(--blue-bright);border:0.5px solid var(--blue);border-radius:4px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s}
+  .btn-ghost:hover{background:rgba(45,107,255,0.1)}
+  .hero-right{background:var(--dark-800);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+  .hero-right::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;border:1px solid rgba(45,107,255,0.12);top:50%;left:50%;transform:translate(-50%,-50%)}
+  .hero-right::after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;border:1px solid rgba(45,107,255,0.2);top:50%;left:50%;transform:translate(-50%,-50%)}
+  .glow-orb{position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(45,107,255,0.18) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%)}
+  .hero-logo-wrap{position:relative;z-index:2;text-align:center}
+  .hero-logo-wrap img{width:190px;height:190px;border-radius:42px;object-fit:contain;background:#000;display:block;margin:0 auto 1.5rem;box-shadow:0 0 60px rgba(45,107,255,0.35),0 24px 60px rgba(0,0,0,0.6);animation:floatLogo 4s ease-in-out infinite}
+  @keyframes floatLogo{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  .hero-tagline{font-size:11px;font-weight:300;font-style:italic;color:var(--text-muted);letter-spacing:.1em}
+  .hero-dots{display:flex;gap:6px;justify-content:center;margin-top:1.2rem}
+  .hero-dots span{width:4px;height:4px;border-radius:50%;background:var(--text-muted)}
+  .hero-dots span:nth-child(2){background:var(--blue);width:16px;border-radius:2px}
+  .section{padding:6rem 3rem;border-bottom:0.5px solid var(--border-subtle)}
+  .section-header{display:flex;align-items:baseline;gap:1.2rem;margin-bottom:2.5rem}
+  .section-num{font-size:10px;color:var(--blue);letter-spacing:.14em;font-weight:700}
+  .section-title{font-size:28px;font-weight:700;color:var(--text-primary)}
+  .category-tabs{display:flex;gap:0;flex-wrap:wrap;margin-bottom:2.5rem;border:0.5px solid var(--border-subtle);border-radius:6px;overflow:hidden;width:fit-content}
+  .tab-btn{font-family:var(--font);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;font-weight:600;padding:.7rem 1.4rem;background:transparent;color:var(--text-muted);border:none;cursor:pointer;transition:all .2s;border-right:0.5px solid var(--border-subtle)}
+  .tab-btn:last-child{border-right:none}
+  .tab-btn:hover{color:var(--text-primary);background:var(--dark-600)}
+  .tab-btn.active{background:var(--blue);color:white}
+  .work-panel{display:none}
+  .work-panel.active{display:block}
+  .empty-state{padding:5rem 2rem;text-align:center;border:0.5px dashed var(--border-subtle);border-radius:8px}
+  .empty-state p{font-size:13px;color:var(--text-muted);margin-top:0.8rem}
+  .empty-icon{font-size:36px;opacity:0.3}
+  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border-subtle)}
+  .work-card{cursor:pointer;overflow:hidden;background:var(--dark-800);transition:transform .2s}
+  .work-card:hover{transform:translateY(-2px)}
+  .work-thumb{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#000}
+  .work-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s cubic-bezier(.25,.46,.45,.94)}
+  .work-card:hover .work-thumb img{transform:scale(1.04)}
+  .work-info{padding:1rem 1.2rem 1.3rem;border-top:0.5px solid var(--border-subtle);background:var(--dark-700)}
+  .work-title{font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:2px}
+  .work-sub{font-size:11px;color:var(--text-secondary)}
+  .skills-layout{display:grid;grid-template-columns:1fr 1fr}
+  .skill-item{padding:2.2rem 2.5rem;border:0.5px solid var(--border-subtle);position:relative;overflow:hidden;transition:background .25s}
+  .skill-item:hover{background:var(--dark-600)}
+  .skill-item::after{content:"";position:absolute;bottom:0;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--blue-bright));transition:width .35s}
+  .skill-item:hover::after{width:100%}
+  .skill-num{font-size:10px;color:var(--blue);letter-spacing:.12em;margin-bottom:.6rem;font-weight:700}
+  .skill-name{font-size:19px;font-weight:700;color:var(--text-primary);margin-bottom:.5rem}
+  .skill-desc{font-size:12px;color:var(--text-secondary);line-height:1.8}
+  .divider{display:flex;align-items:center;gap:1rem;padding:2rem 3rem;border-bottom:0.5px solid var(--border-subtle)}
+  .divider::before,.divider::after{content:"";flex:1;height:.5px;background:var(--border-subtle)}
+  .divider-mark{font-size:16px;color:var(--blue)}
+  .contact-section{padding:7rem 3rem;text-align:center;background:var(--dark-800);position:relative;overflow:hidden}
+  .contact-section::before{content:"";position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(45,107,255,0.12) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+  .contact-eyebrow{font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--blue-bright);margin-bottom:1.5rem;position:relative;font-weight:600}
+  .contact-title{font-size:clamp(30px,4vw,52px);font-weight:700;line-height:1.15;color:var(--text-primary);margin-bottom:1rem;position:relative}
+  .contact-title em{font-style:italic;color:var(--blue-bright);font-weight:300}
+  .contact-desc{font-size:13px;color:var(--text-secondary);max-width:400px;margin:0 auto 2.5rem;line-height:1.85;position:relative}
+  .btn-whatsapp{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:1rem 2.4rem;background:#25D366;color:white;border:none;border-radius:4px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:background .2s,transform .15s;position:relative;box-shadow:0 0 30px rgba(37,211,102,0.25)}
+  .btn-whatsapp:hover{background:#1ebe5d;transform:translateY(-1px)}
+  .btn-whatsapp svg{width:18px;height:18px;fill:white;flex-shrink:0}
+  .contact-number{font-size:12px;color:var(--text-muted);margin-top:1rem;position:relative;letter-spacing:0.08em}
+  footer{display:flex;justify-content:space-between;align-items:center;padding:2.5rem 3rem;flex-wrap:wrap;gap:1rem;border-top:0.5px solid var(--border-subtle);background:var(--dark-900)}
+  .footer-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .footer-brand img{width:34px;height:34px;border-radius:8px;object-fit:contain;background:#000;flex-shrink:0}
+  .footer-brand-text strong{display:block;font-size:13px;font-weight:700;color:var(--text-primary)}
+  .footer-brand-text span{display:block;font-size:8px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-top:2px}
+  .footer-links{display:flex;gap:2rem;list-style:none}
+  .footer-links a{font-size:10px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--text-secondary);transition:color .2s;font-weight:500}
+  .footer-links a:hover{color:var(--blue-bright)}
+  .footer-copy{font-size:10px;color:var(--text-muted)}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+  .hero-eyebrow{animation:fadeUp .6s ease both .1s}.hero-title{animation:fadeUp .7s ease both .25s}
+  .hero-desc{animation:fadeUp .7s ease both .38s}.hero-actions{animation:fadeUp .7s ease both .5s}
+  @media(max-width:800px){
+    nav{padding:1rem 1.5rem}.nav-links{display:none}
+    .hero{grid-template-columns:1fr;min-height:auto}
+    .hero-left{padding:4rem 1.5rem 3rem;border-right:none;border-bottom:0.5px solid var(--border-subtle)}
+    .hero-right{min-height:320px}
+    .section{padding:4rem 1.5rem}
+    .work-grid{grid-template-columns:1fr 1fr}
+    .skills-layout{grid-template-columns:1fr}
+    .contact-section{padding:5rem 1.5rem}
+    footer{flex-direction:column;align-items:flex-start;padding:2rem 1.5rem}
+    .footer-links{display:none}
+    .category-tabs{width:100%}
+    .tab-btn{flex:1;text-align:center;padding:.7rem .6rem}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-brand">
+    <img src="images/grc.jpg" alt="GRC Logo" class="nav-logo-img">
+    <div class="nav-brand-text">
+      <strong>Guy Rich Concepts</strong>
+      <span>Brand &amp; Design Studio</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#skills">Services</a></li>
+    <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Brand &amp; Design Studio</p>
+    <h1 class="hero-title">Creating your<br>brand with <em>essence</em></h1>
+    <p class="hero-desc">We craft identities that speak before you say a word — logos, graphics, and brand systems built around who you truly are.</p>
+    <div class="hero-actions">
+      <a href="#work" class="btn-primary">View Our Work</a>
+      <a href="#contact" class="btn-ghost">Start a Project</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="glow-orb"></div>
+    <div class="hero-logo-wrap">
+      <img src="images/grc.jpg" alt="Guy Rich Concepts Logo">
+      <p class="hero-tagline">Creating your brand with essence</p>
+      <div class="hero-dots"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="work">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Selected Work</h2>
+  </div>
+  <div class="category-tabs">
+    <button class="tab-btn active" onclick="switchTab(this,'logos')">Logo Design</button>
+    <button class="tab-btn" onclick="switchTab(this,'flyers')">Flyers</button>
+    <button class="tab-btn" onclick="switchTab(this,'social')">Social Media</button>
+    <button class="tab-btn" onclick="switchTab(this,'party')">Party &amp; Events</button>
+    <button class="tab-btn" onclick="switchTab(this,'branding')">Branding</button>
+  </div>
+
+  <div class="work-panel active" id="panel-logos">
+    <div class="work-grid">
+      <div class="work-card">
+        <div class="work-thumb">
+          <img src="images/edu_pal.jpg" alt="Edu Pal">
+        </div>
+        <div class="work-info">
+          <div class="work-title">Edu Pal</div>
+          <div class="work-sub">Education platform</div>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-thumb">
+          <img src="images/eliana.jpg" alt="Essence by Tife">
+        </div>
+        <div class="work-info">
+          <div class="work-title">Essence by Tife</div>
+          <div class="work-sub">Fragrance brand</div>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-thumb">
+          <img src="images/gifted_trip.jpg" alt="Gifted Trip">
+        </div>
+        <div class="work-info">
+          <div class="work-title">Gifted Trip</div>
+          <div class="work-sub">Travel agency</div>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-thumb">
+          <img src="images/lee_logo.jpg" alt="Lee Ent">
+        </div>
+        <div class="work-info">
+          <div class="work-title">Lee Ent</div>
+          <div class="work-sub">Entertainment brand</div>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-thumb">
+          <img src="images/lee3.jpg" alt="Fresh Fix">
+        </div>
+        <div class="work-info">
+          <div class="work-title">Fresh Fix</div>
+          <div class="work-sub">Product logo</div>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-thumb">
+          <img src="images/yummy.jpg" alt="Yummy en Spicy">
+        </div>
+        <div class="work-info">
+          <div class="work-title">Yummy en Spicy</div>
+          <div class="work-sub">Food brand</div>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-thumb">
+          <img src="images/fave_tech.jpg" alt="Fave Tech">
+        </div>
+        <div class="work-info">
+          <div class="work-title">Fave Tech</div>
+          <div class="work-sub">Tech brand</div>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-thumb">
+          <img src="images/aseed.jpg" alt="Aseed Gadgets">
+        </div>
+        <div class="work-info">
+          <div class="work-title">Aseed Gadgets</div>
+          <div class="work-sub">Gadgets brand</div>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-thumb">
+          <img src="images/may.jpg" alt="May Thrift & More">
+        </div>
+        <div class="work-info">
+          <div class="work-title">May Thrift & More</div>
+          <div class="work-sub">Fashion brand</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="work-panel" id="panel-flyers">
+    <div class="empty-state"><div class="empty-icon">🗂️</div><p>Flyer designs coming soon</p></div>
+  </div>
+  <div class="work-panel" id="panel-social">
+    <div class="empty-state"><div class="empty-icon">📱</div><p>Social media designs coming soon</p></div>
+  </div>
+  <div class="work-panel" id="panel-party">
+    <div class="empty-state"><div class="empty-icon">🎉</div><p>Party &amp; event designs coming soon</p></div>
+  </div>
+  <div class="work-panel" id="panel-branding">
+    <div class="empty-state"><div class="empty-icon">✦</div><p>Branding projects coming soon</p></div>
+  </div>
+</section>
+
+<div class="divider"><span class="divider-mark">✦</span></div>
+
+<section class="section" id="skills" style="padding-top:4rem">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <h2 class="section-title">What We Do</h2>
+  </div>
+  <div class="skills-layout">
+    <div class="skill-item"><div class="skill-num">01</div><div class="skill-name">Brand Identity</div><div class="skill-desc">From strategy to visuals — we build complete brand systems that are consistent, memorable, and true to your essence.</div></div>
+    <div class="skill-item"><div class="skill-num">02</div><div class="skill-name">Logo Design</div><div class="skill-desc">Custom logomarks and wordmarks crafted to stand out and scale across every medium — print, screen, and beyond.</div></div>
+    <div class="skill-item"><div class="skill-num">03</div><div class="skill-name">Graphics Design</div><div class="skill-desc">Flyers, posters, banners, and print materials designed with precision and personality to make your message land.</div></div>
+    <div class="skill-item"><div class="skill-num">04</div><div class="skill-name">Social Media Design</div><div class="skill-desc">Scroll-stopping content designed for Instagram, Facebook, TikTok and more — templates, campaigns, and custom creatives.</div></div>
+    <div class="skill-item"><div class="skill-num">05</div><div class="skill-name">Party &amp; Event Design</div><div class="skill-desc">Invitations, backdrops, props, and décor graphics that bring the energy and aesthetic of your celebration to life.</div></div>
+    <div class="skill-item"><div class="skill-num">06</div><div class="skill-name">Custom Concepts</div><div class="skill-desc">Have something unique in mind? We love a challenge. Bring your idea and we'll shape it into something extraordinary.</div></div>
+  </div>
+</section>
+
+<div class="contact-section" id="contact">
+  <p class="contact-eyebrow">Start a Project</p>
+  <h2 class="contact-title">Ready to build your<br>brand with <em>essence?</em></h2>
+  <p class="contact-desc">Let's talk about your vision. Whether you're starting from scratch or refreshing an existing brand, we're here to make it extraordinary.</p>
+  <a href="https://wa.me/2347025119958" target="_blank" class="btn-whatsapp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Chat on WhatsApp
+  </a>
+  <p class="contact-number">+234 702 511 9958</p>
+</div>
+
+<footer>
+  <a href="#" class="footer-brand">
+    <img src="images/grc.jpg" alt="GRC Logo">
+    <div class="footer-brand-text">
+      <strong>Guy Rich Concepts</strong>
+      <span>Creating your brand with essence</span>
+    </div>
+  </a>
+  <ul class="footer-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#skills">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <p class="footer-copy">&copy; 2025 Guy Rich Concepts</p>
+</footer>
+
+<script>
+function switchTab(btn, panel) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.work-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('panel-' + panel).classList.add('active');
+}
+</script>
+</body>
+</html>
